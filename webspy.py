@@ -250,50 +250,50 @@ class WebSpyEnhanced:
         
        # if missing_apis:
        #     message = "The following API keys are missing:\n" + #"\n".join(missing_apis)
-#            message += "\n\nSome features will not work without these #keys."
-   #         messagebox.showwarning("Missing API Keys", message)
+       #     message += "\n\nSome features will not work without these #keys."
+       #     messagebox.showwarning("Missing API Keys", message)
         
     def setup_style(self):
-        """Setup optimized styling for different platforms"""
-        style = ttk.Style()
-        
-        # Use appropriate theme for each platform
-        if self.is_windows:
-            style.theme_use('vista')
-        elif self.is_macos:
-            style.theme_use('aqua')
-        else:
-            style.theme_use('clam')
-        
-        # Dark theme colors
-        style.configure('TNotebook', background='#2b2b2b')
-        style.configure('TNotebook.Tab', background='#404040', foreground='white', padding=[8, 4])
-        style.map('TNotebook.Tab', background=[('selected', '#0078d4')])
-        style.configure('TFrame', background='#2b2b2b')
-        style.configure('TLabel', background='#2b2b2b', foreground='white')
-        style.configure('Dark.TButton', 
+    """Setup optimized styling for different platforms"""
+    style = ttk.Style()
+    
+    # Use appropriate theme for each platform
+    if self.is_windows:
+        style.theme_use('vista')
+    elif self.is_macos:
+        style.theme_use('aqua')
+    else:
+        style.theme_use('clam')
+    
+    # Dark theme colors
+    style.configure('TNotebook', background='#2b2b2b')
+    style.configure('TNotebook.Tab', background='#404040', foreground='white', padding=[8, 4])
+    style.map('TNotebook.Tab', background=[('selected', '#0078d4')])
+    style.configure('TFrame', background='#2b2b2b')
+    style.configure('TLabel', background='#2b2b2b', foreground='white')
+    style.configure('Dark.TButton', 
                    background='#0078d4',                   
                    foreground='white', 
                    borderwidth=1,
                    focusthickness=3,
                    focuscolor='#0078d4')
-        style.map('Dark.TButton',
-             background=[('active', '#005a9e'), ('!active', '#0078d4')],
-     foreground=[('active', 'white'), ('pressed', 'white'), ('!active', 'white')],
-     relief=[('pressed', 'sunken'), ('!pressed', 'raised')])
+    style.map('Dark.TButton',
+              background=[('active', '#005a9e'), ('!active', '#0078d4')],
+              foreground=[('active', 'white'), ('pressed', 'white'), ('!active', 'white')],
+              relief=[('pressed', 'sunken'), ('!pressed', 'raised')])
 
-        # Progress bar style
-        style.configure('TProgressbar', background='#0078d4')
+    # Progress bar style
+    style.configure('TProgressbar', background='#0078d4')
 
-         # Configure combobox style
-        style.configure('TCombobox', 
+    # Configure combobox style
+    style.configure('TCombobox', 
                    fieldbackground='#1e1e1e', 
                    background='#0078d4',
                    foreground='white',
                    arrowcolor='white')
 
-         # Configure entry fields
-        style.configure('TEntry',
+    # Configure entry fields
+    style.configure('TEntry',
                    fieldbackground='#1e1e1e',
                    foreground='white',
                    insertcolor='white')
@@ -3261,3 +3261,4 @@ Configure your settings and start scanning.
 
 if __name__ == "__main__":
     main()
+
